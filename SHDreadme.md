@@ -86,8 +86,7 @@
 ### CI/CD 설정
 #### AWS Code Build 적용됐는가?
 #### Contract Test
-#### (Advanced) Canary Deploy
-                Shadow Deply, A/B Test
+#### (Advanced) Canary Deploy, Shadow Deply, A/B Test (각 2점)
                 
 ### 운영 유연성
 #### Config Map / Secret

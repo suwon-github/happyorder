@@ -2,73 +2,98 @@ package skhappydelivery;
 
 public class OrderPlaced extends AbstractEvent {
 
-    private Long id;
-    private Long storeId;
-    private Long menuId;
-    private Integer menuCount;
-    private Integer menuPrice;
-    private String customerAddress;
-    private Integer phoneNumber;
-    private Long customerName;
+	private Long orederid;
 
-    public OrderPlaced(){
-        super();
-    }
+	public Long getOrederid() {
+		return this.orederid;
+	}
 
-    public Long getId() {
-        return id;
-    }
+	public void setOrederid(Long orederid) {
+		this.orederid = orederid;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-    public Long getStoreId() {
-        return storeId;
-    }
+	private Long storeId;
+	private Long menuId;
+	private Integer menuCount;
+	private Integer menuPrice;
+	private String customerAddress;
+	private Integer phoneNumber;
+	private String customerName;
+ 	private Long customerId;
 
-    public void setStoreId(Long storeId) {
-        this.storeId = storeId;
-    }
-    public Long getMenuId() {
-        return menuId;
-    }
+	public Long getCustomerId() {
+		return this.customerId;
+	}
 
-    public void setMenuId(Long menuId) {
-        this.menuId = menuId;
-    }
-    public Integer getMenuCount() {
-        return menuCount;
-    }
+	public void setCustomerId(Long customerId) {
+		this.customerId = customerId;
+	}
 
-    public void setMenuCount(Integer menuCount) {
-        this.menuCount = menuCount;
-    }
-    public Integer getMenuPrice() {
-        return menuPrice;
-    }
 
-    public void setMenuPrice(Integer menuPrice) {
-        this.menuPrice = menuPrice;
-    }
-    public String getCustomerAddress() {
-        return customerAddress;
-    }
+	
 
-    public void setCustomerAddress(String customerAddress) {
-        this.customerAddress = customerAddress;
-    }
-    public Integer getPhoneNumber() {
-        return phoneNumber;
-    }
+	public Long getStoreId() {
+		return this.storeId;
+	}
 
-    public void setPhoneNumber(Integer phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-    public Long getCustomerName() {
-        return customerName;
-    }
+	public void setStoreId(Long storeId) {
+		this.storeId = storeId;
+	}
 
-    public void setCustomerName(Long customerName) {
-        this.customerName = customerName;
-    }
+	public Long getMenuId() {
+		return this.menuId;
+	}
+
+	public void setMenuId(Long menuId) {
+		this.menuId = menuId;
+	}
+
+	public Integer getMenuCount() {
+		return this.menuCount;
+	}
+
+	public void setMenuCount(Integer menuCount) {
+		this.menuCount = menuCount;
+	}
+
+	public Integer getMenuPrice() {
+		return this.menuPrice;
+	}
+
+	public void setMenuPrice(Integer menuPrice) {
+		this.menuPrice = menuPrice;
+	}
+
+	public String getCustomerAddress() {
+		return this.customerAddress;
+	}
+
+	public void setCustomerAddress(String customerAddress) {
+		this.customerAddress = customerAddress;
+	}
+
+	public Integer getPhoneNumber() {
+		return this.phoneNumber;
+	}
+
+	public void setPhoneNumber(Integer phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public String getCustomerName() {
+		return this.customerName;
+	}
+
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
+	}
+
+
+	@Override
+	public String toString() {
+		return "OrderPlacedObj [orederid=" + orederid + ", storeId=" + storeId + ", menuId=" + menuId + ", menuCount=" + menuCount
+				+ ", menuPrice=" + menuPrice + ", customerAddress=" + customerAddress + ", phoneNumber=" + phoneNumber
+				+ ", customerName=" + customerName + "]";
+	}
+
 }

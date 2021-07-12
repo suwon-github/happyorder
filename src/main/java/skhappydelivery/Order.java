@@ -1,9 +1,14 @@
 package skhappydelivery;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.PostPersist;
+import javax.persistence.PostUpdate;
+import javax.persistence.Table;
+
 import org.springframework.beans.BeanUtils;
-import java.util.List;
-import java.util.Date;
 
 @Entity
 @Table(name="Order_table")
@@ -31,15 +36,15 @@ public class Order {
         //Following code causes dependency to external APIs
         // it is NOT A GOOD PRACTICE. instead, Event-Policy mapping is recommended.
 
-        skhappydelivery.external.Pay pay = new skhappydelivery.external.Pay();
+        skhappydelivery.external.Payed Payed = new skhappydelivery.external.Payed();
         // mappings goes here
-      //  pay.setOrderId(Long.valueOf(getOrderId()));
-      //  if(getMenuPrice()!=null)
-       // pay.setTotalPrice(Integer.valueOf(getMenuPrice()));
+
+        Payed.setId(this.orderId);
+        Payed.setTotalPrice(this.menuCount * this.menuPrice);
         
 
         OrderApplication.applicationContext.getBean(skhappydelivery.external.PayService.class)
-            .pay(pay);
+            .payed(Payed);
 
 
     }
@@ -49,8 +54,6 @@ public class Order {
         OrderCanceled orderCanceled = new OrderCanceled();
         BeanUtils.copyProperties(this, orderCanceled);
         orderCanceled.publishAfterCommit();
-
-
     }
 
 
@@ -126,6 +129,12 @@ public class Order {
     }
 
 
-
+	@Override
+	public String toString() {
+		return "OrderObj [orderId=" + orderId + ", customerId=" + customerId + ", customerName=" + customerName
+				+ ", customerAddress=" + customerAddress + ", phoneNumber=" + phoneNumber + ", menuId=" + menuId
+				+ ", menuCount=" + menuCount + ", menuPrice=" + menuPrice + ", storeId=" + storeId + ", orderStatus="
+				+ orderStatus + "]";
+	}
 
 }

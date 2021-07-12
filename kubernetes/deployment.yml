@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: order
-          image: 700786551342.dkr.ecr.ap-northeast-2.amazonaws.com/order:v1
+          image: username/order:latest
           ports:
             - containerPort: 8080
           readinessProbe:

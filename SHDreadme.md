@@ -2,8 +2,11 @@ SK Happy Delivery
 
 1. 분석/설계
 
-- 이벤트스토밍
+1.1 이벤트스토밍
+
 - url: http://www.msaez.io/#/storming/wf1WRjEyVVWd1Abldu2nsM6FwbL2/58c36eee763868e2a4b6cc1f019683fe
+***
+
 - 이벤트 도출
 ***
 ![이벤트도출결과](https://user-images.githubusercontent.com/45377807/125230473-ca215d00-e313-11eb-8866-2bdbfd5480be.png)
@@ -27,6 +30,11 @@ SK Happy Delivery
 ***
 - 완성된 모형(실선은 Req/Res, 점선은 Pub/Sub)
 <img width="830" alt="이벤트스토밍 결과" src="https://user-images.githubusercontent.com/45377807/125232289-423d5200-e317-11eb-83e9-f936ad5ea2c4.png">
+
+
+***
+- 헥사고날 아키텍처 다이어그램 도출
+![헥사고날 아키텍쳐 다이어그램](https://user-images.githubusercontent.com/45377807/125233520-b7aa2200-e319-11eb-959d-6f60e25f1f75.png)
 
 
 
